@@ -1,0 +1,27 @@
+﻿
+<li [class.completed]="item.done">
+    <div [hidden]="editMode" class="view">
+        <input class="toggle" type="checkbox" [checked]="item.done" (click)="toggle()">
+        <label (dblclick)="edit(editInput)">{{item.description}}</label>
+        <button type="button" class="left-button item-button btn btn-default" (click)="edit(editInput)">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+        <button type="button" class="item-button btn btn-default" (click)="delete()">
+            <span class="glyphicon glyphicon-trash"></span>
+        </button>
+    </div>
+    <div [hidden]="!editMode" class="edit">
+      <input class="edit-item" [value]="item.description"
+        #editInput
+        (keyup.enter)="commitEdit(editInput.value)"
+        (keyup.escape)="cancelEdit(editInput)"
+        (blur)="commitEdit(editInput.value)">
+
+        <button type="button" class="left-button item-button btn btn-default">
+            <span class="glyphicon glyphicon-ok"></span>
+        </button>
+        <button type="button" class="item-button btn btn-default">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+    </div>
+</li>

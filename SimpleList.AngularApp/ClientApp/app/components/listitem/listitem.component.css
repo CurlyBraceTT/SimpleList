@@ -1,0 +1,63 @@
+﻿label {
+    white-space: pre;
+    word-break: break-word;
+    width: 100%;
+    margin-left: 40px;
+    line-height: 40px;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.toggle {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    right: 0px;
+    height: 40px;
+    margin: 0px;
+}
+
+.left-button {
+    right: 45px;
+}
+
+.completed label {
+    text-decoration: line-through;
+    color: grey;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+}
+
+.view {
+    position: relative;
+    background-color: #eee;
+    border-style: solid;
+    border-color: #e7e7e7;
+    border-width: 0px 1px 1px 1px;
+}
+
+.edit {
+    position: relative;
+    border-width: 0px 0px 0px 0px;
+}
+
+.item-button span {
+    font-size: smaller;
+}
+
+.view .item-button { 
+    display: none;
+}
+
+.view:hover .item-button {
+    display: block;
+}

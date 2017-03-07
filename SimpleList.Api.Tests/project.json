@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0-*",
+
+  "testRunner": "xunit",
+  "dependencies": {
+    "Microsoft.AspNetCore.TestHost": "1.1.0",
+    "NETStandard.Library": "1.6.1",
+    "SimpleList.Api": "1.0.0-*",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "xunit": "2.2.0-rc4-build3536",
+    "Microsoft.DotNet.InternalAbstractions": "1.0.500-preview2-1-003177",
+    "Microsoft.AspNet.WebApi.Client": "5.2.3",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.1.0",
+    "System.Net.Http": "4.3.1"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.0"
+        }
+      },
+      "imports": [
+        "dnxcore50",
+        "portable-net451+win8"
+      ]
+    }
+  }
+}

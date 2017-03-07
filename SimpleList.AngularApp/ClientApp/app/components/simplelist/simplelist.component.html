@@ -1,0 +1,18 @@
+﻿<section class="simple-list">
+    <header class="header">
+        <input class="edit-item" (keyup.enter)="addItem()" [(ngModel)]="newItem.description" placeholder="Add new item" autofocus>
+        <button type="button" class="item-button btn btn-default" (click)="addItem()">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+    </header>
+    <section>
+        <ul>
+            <list-item *ngFor="let item of items" [item]="item" 
+                       (itemDeleted)="itemDeleted($event)">
+            </list-item>
+        </ul>
+    </section>
+    <footer class="footer">
+        <span class="todo-count"></span>
+    </footer>
+</section>
